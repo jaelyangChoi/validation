@@ -123,6 +123,7 @@ public class ValidationItemControllerV3 {
         itemRepository.update(itemId, item);
         return "redirect:/validation/v3/items/{itemId}";
     }
+
     @PostMapping("/{itemId}/edit")
     public String editV2(@PathVariable Long itemId, @Validated(UpdateCheck.class) @ModelAttribute Item item, BindingResult bindingResult) {
         //특정 필드가 아닌 복합 룰 검증
